@@ -89,12 +89,22 @@ main {
     }
 
     nav {
+        flex-direction: column;
         margin-top: 10px;
     }
 
     nav a {
         margin: 5px 0;
     }
+    .container-main {
+        width: 50%;
+        flex-direction: column;
+        border-radius: 2rem;
+    }
+    .main-img {
+        width: 24rem;
+    }
+
 } 
 
 .informative-section {
