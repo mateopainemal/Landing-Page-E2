@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+    <script src="https://kit.fontawesome.com/4bbf16e073.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/assets/Mateo Painemal1.png" type="image/x-icon">
     <title>Navbar Landing Page</title>
 </head>
 <body>
 
     <header>
-        <img src="Mateo Painemal1.png" alt="Logo">
+        <img src="/assets/Mateo Painemal1.png" alt="Logo">
         <nav>
-            <a href="#">INICIO</a>
-            <a href="#">SERVICIOS</a>
-            <a href="#">CLIENTES</a>
-            <a href="#">CONTACTO</a>
+            <a href="#inicio">INICIO</a>
+            <a href="#servicios">SERVICIOS</a>
+            <a href="#ventajas">VENTAJAS</a>
+            <a href="#contacto">CONTACTO</a>
         </nav>
     </header>
 
     <main>
-        <div class="container-main">
+        <div class="container-main"  id="inicio">
             <div class="container-text">
                 <h2>Soluciones Digitales a tu Alcance</h2>
                 <p>¡Hola! Soy Mateo Painemal, un apasionado desarrollador web fullstack y diseñador UX/UI.</p>
@@ -29,15 +32,84 @@
                 </div>
                       
             </div>
-            <img class="main-img" src="IMG-20230505-WA0059.jpg" alt="Mateo Painemal">
+            <img class="main-img" src="/assets/IMG-20230505-WA0059.jpg" alt="Mateo Painemal">
         </div>
     </main>
-<div class="section-container">
-    <section class="informative-section">
-        <h3>Descubre más sobre mis Servicios</h3>
-        <p>Como diseñador y desarrollador, mi enfoque es brindar soluciones digitales que destaquen y generen impacto. Desde la conceptualización hasta la implementación, cada proyecto recibe atención personalizada para garantizar resultados excepcionales. Explora mis servicios y descubre cómo puedo ayudarte a alcanzar tus metas en el mundo digital.</p>
-    </section>
-</div>
+        <div class="section-container" id="servicios">
+            <section class="informative-section">
+                 <h3>Descubre más sobre mis Servicios</h3>
+                    <p>Como diseñador y desarrollador, mi enfoque es brindar soluciones digitales que destaquen y generen impacto. Desde la conceptualización hasta la implementación, cada proyecto recibe atención personalizada para garantizar resultados excepcionales. Explora mis servicios y descubre cómo puedo ayudarte a alcanzar tus metas en el mundo digital.</p>
+             </section>
+        </div>
+        <div class="section-ventajas" id="ventajas">
+            <section class="ventajas">
+                <div class="ventajas-title">
+                    <h3>Ventajas de contratar mis servicios</h3>
+                </div>
+                <div class="card-1">
+                    <i class="fa-solid fa-code"></i>
+                    <h4>Tecnologias que uso</h4>
+                    <div class="card-img">
+                            <img src="/assets/html5.svg" alt="Html">
+                            <img src="/assets/css3-alt.svg" alt="Css">
+                            <img src="/assets/js.svg" alt="Js">
+                            <img src="/assets/bootstrap.svg" alt="Bootstrap">
+                            <img src="/assets/sass.svg" alt="">
+                            <img src="/assets/react.svg" alt="React">
+                            <img src="/assets/node.svg" alt="Node">
+                            <img src="/assets/java.svg" alt="Java">
+                            <img src="/assets/database-solid.svg" alt="Sql">
+                    </div>
+                </div>
+                <div class="card-2">
+                    <i class="fa-solid fa-user"></i>
+                    <h4>Enfoque</h4>
+                    <div>
+                        <p>Mi enfoque integral como desarrollador fullstack y diseñador UX/UI garantiza la creación de productos cohesivos desde la concepción hasta la implementación.</p>
+                    </div>
+                </div>
+                <div class="card-3">
+                    <i class="fa-solid fa-cubes"></i>
+                    <h4>Proyectos</h4>
+                    <div>
+                        <p>Con un historial de proyectos exitosos, ofrezco la capacidad demostrada de traducir las necesidades del usuario en experiencias intuitivas y funcionales, respaldada por mi adaptabilidad a nuevas tecnologías.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="contact-section" id="contacto">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49408.85199148447!2d-65.73399292807132!3d-39.287042906054225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95e4880073e09383%3A0xacd04afe2bd8837e!2sChoele-choel%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses-419!2sar!4v1703274162330!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+            <div class="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre">
+    
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico">
+    
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+    
+        <footer>
+            <p>&copy; 2023 Mateo Painemal | Todos los derechos reservados</p>
+        </footer>
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        </script>
 </body>
 </html>
 
